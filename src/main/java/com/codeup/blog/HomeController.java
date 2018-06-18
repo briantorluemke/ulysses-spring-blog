@@ -9,6 +9,6 @@ public class HomeController {
 
     @GetMapping("/")
     public @ResponseBody String sayHello() {
-        return "This is the landing page!";
+        return "home";
     }
 }

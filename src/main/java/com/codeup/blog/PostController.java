@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PostController {
 
     @GetMapping("/posts")
+    // make an arraylist of objects to send to the view
     public @ResponseBody String posts() {
         return "This is the index page of the blog.";
     }
@@ -25,7 +26,8 @@ public class PostController {
     }
 
     @PostMapping("/posts/create")
-    public @ResponseBody String makePost(){
+    public @ResponseBody String viewPosts(){
         return "Here is where you make a post";
     }
+
 }
