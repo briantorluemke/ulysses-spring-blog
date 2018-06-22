@@ -3,7 +3,16 @@
 <head th:replace="partials :: head" />
 <body>
 <nav th:replace="partials :: navbar"></nav>
-<h1>This is the page you will use to view an individual ad.</h1>
+<div class="card">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Title: <span th:text="${post.title}"></span></h5>
+        <p class="card-text">Body: <span th:text="${post.body}"></span></p>
+        <a href="/posts" class="btn btn-primary">Go back</a>
+    </div>
+</div>
 <script th:replace="partials :: footer"></script>
 </body>
 </html>

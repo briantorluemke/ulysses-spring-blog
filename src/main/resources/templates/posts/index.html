@@ -3,7 +3,25 @@
 <head th:replace="partials :: head" />
 <body>
 <nav th:replace="partials :: navbar"></nav>
-<h1>This is where you will find all of the blog posts.</h1>
+<h1>Here are the existing posts!</h1>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Title
+    </div>
+    <ul class="list-group list-group-flush">
+        <li th:each="post : ${posts}" class="list-group-item">
+            <a th:href="@{'/posts/' + ${post.id}}"><h3><span th:text="${post.title}"></span></h3></a>
+            <form th:action="@{'/posts/' + ${post.id} + '/edit'}" method="get" class="delete">
+                <button class="btn btn-outline-primary" type="submit">Edit</button>
+            </form>
+            <br />
+            <form th:action="@{'/posts/' + ${post.id} + '/delete'}" method="get" class="delete">
+                <button class="btn btn-outline-danger" type="submit">X</button>
+            </form>
+        </li>
+    </ul>
+</div>
+
 <script th:replace="partials :: footer"></script>
 </body>
 </html>
