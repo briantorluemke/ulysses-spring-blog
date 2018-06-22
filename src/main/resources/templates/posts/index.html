@@ -10,14 +10,15 @@
     </div>
     <ul class="list-group list-group-flush">
         <li th:each="post : ${posts}" class="list-group-item">
+            <form th:action="@{'/posts/' + ${post.id} + '/delete'}" method="get" class="delete">
+                <button class="btn btn-outline-danger float-right" type="submit">X</button>
+            </form>
+            <br />
             <a th:href="@{'/posts/' + ${post.id}}"><h3><span th:text="${post.title}"></span></h3></a>
             <form th:action="@{'/posts/' + ${post.id} + '/edit'}" method="get" class="delete">
                 <button class="btn btn-outline-primary" type="submit">Edit</button>
             </form>
             <br />
-            <form th:action="@{'/posts/' + ${post.id} + '/delete'}" method="get" class="delete">
-                <button class="btn btn-outline-danger" type="submit">X</button>
-            </form>
         </li>
     </ul>
 </div>
