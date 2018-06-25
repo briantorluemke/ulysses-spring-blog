@@ -4,7 +4,7 @@ import com.codeup.blog.models.Post;
 import com.codeup.blog.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class PostService {
     private final PostRepository postDao;
 

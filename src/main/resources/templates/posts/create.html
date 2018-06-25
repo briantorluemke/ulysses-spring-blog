@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:replace="partials :: head" />
 <body>
 <nav th:replace="partials :: navbar"></nav>
-<form action="/posts/create" method="post" th:object="${post}">
+<form th:action="@{/posts/create}" method="post" th:object="${post}">
     <div class="form-group">
         <label for="title">Post title</label>
         <input th:field = "*{title}" type="text" class="form-control" id="title" placeholder="Enter title" />

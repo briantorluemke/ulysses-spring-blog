@@ -14,7 +14,8 @@ public class Post {
     @Column(nullable = false)
     private String body;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn
     private User owner;
 
     public User getOwner() {
@@ -34,6 +35,12 @@ public class Post {
         this.id = id;
         this.title = title;
         this.body = body;
+    }
+
+    public Post(String title, String body, User owner) {
+        this.title = title;
+        this.body = body;
+        this.owner = owner;
     }
 
     public Post() {}
