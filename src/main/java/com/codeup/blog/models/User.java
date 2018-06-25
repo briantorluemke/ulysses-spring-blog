@@ -1,5 +1,6 @@
 package com.codeup.blog.models;
 import javax.persistence.*;
+
 @Entity
 @Table(name="users")
 public class User {
@@ -12,6 +13,7 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
+
     public User() {
     }
     public User(String username, String email, String password) {

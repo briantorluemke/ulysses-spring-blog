@@ -1,20 +1,21 @@
 package com.codeup.blog.controllers;
 
 import com.codeup.blog.models.Post;
+import com.codeup.blog.repositories.UserRepository;
 import com.codeup.blog.services.PostService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
 @RequestMapping ("/posts")
 public class PostController {
     private final PostService postService;
+    private final UserRepository userRepo;
 
-    public PostController(PostService postService) {
+    public PostController(PostService postService, UserRepository userRepo) {
         this.postService = postService;
+        this.userRepo = userRepo;
     }
 
     @GetMapping("")

@@ -14,6 +14,17 @@ public class Post {
     @Column(nullable = false)
     private String body;
 
+    @OneToOne
+    private User owner;
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
     public Post(String title, String body) {
         this.title = title;
         this.body = body;
