@@ -3,14 +3,15 @@
 <head th:replace="partials :: head" />
 <body>
 <nav th:replace="partials :: navbar"></nav>
-<div class="card">
+<br />
+<div class="card eight">
     <div class="card-header">
         Post
     </div>
     <div class="card-body">
         <h5 class="card-title"><span th:text="${post.title}"></span></h5>
         <p class="card-text"><span th:text="${post.body}"></span></p>
-        <p class="card-text"><span th:text="${post.owner.email}"></span></p>
+        <!--<p class="card-text"><span th:text="${post.owner.email}"></span></p>-->
         <a href="/posts" class="btn btn-primary">Go back</a>
     </div>
 </div>
