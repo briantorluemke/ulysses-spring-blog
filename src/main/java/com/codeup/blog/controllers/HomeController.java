@@ -12,4 +12,9 @@ public class HomeController {
     public String sayHello() {
         return "home";
     }
+
+    @GetMapping("game")
+    public String playGame() {
+        return "game";
+    }
 }

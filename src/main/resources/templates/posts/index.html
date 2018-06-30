@@ -4,7 +4,7 @@
 <body>
 <nav th:replace="partials :: navbar"></nav>
 <h1>Here are the existing posts!</h1>
-<div class="card eight">
+<div class="card w-50 avoid">
     <div class="card-header">
         Title
     </div>
@@ -14,7 +14,7 @@
                 <button class="btn btn-outline-danger float-right" type="submit">X</button>
             </form>
             <br />
-            <a th:href="@{'/posts/' + ${post.id}}"><h3><span th:text="${post.title}"></span></h3></a>
+            <a th:href="@{'/posts/' + ${post.id}}"><p><span th:text="${post.title}"></span></p></a>
             <form th:action="@{'/posts/' + ${post.id} + '/edit'}" method="get" class="delete">
                 <button class="btn btn-outline-primary" type="submit">Edit</button>
             </form>

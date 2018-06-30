@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-color: darkblue;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.simon-game {
+    width: 100%;
+    min-width: 620px;
+    max-width: 620px;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.full-circle {
+    width: 620px;
+    min-height: 620px;
+    border: 10px solid black;
+    border-radius: 100% 100% 100% 100%;
+    background-color: #000;
+    position: relative;
+}
+
+.semi-circle {
+    width: 300px;
+    min-height: 300px;
+    margin:0;
+    padding:0;
+    display: inline-block;
+    float: left;
+    border-color: black;
+}
+
+#green {
+    border: 20px solid black;
+    border-radius: 100% 0 0 0;
+    background-color: green;
+}
+
+
+#red {
+    border: 20px solid black;
+    border-radius: 0 100% 0 0;
+    background-color: red;
+}
+
+
+#yellow {
+    border: 20px solid black;
+    border-radius: 0 0 0 100%;
+    background-color: yellow;
+}
+
+
+#blue {
+    border: 20px solid black;
+    border-radius: 0 0 100% 0;
+    background-color: blue;
+}
+
+.dark {
+    filter: brightness(30%);
+}
+.hidden {
+    display: none;
+}
+.centered {
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    color: white
+}
